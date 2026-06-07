@@ -1,53 +1,61 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>$NYRA - مستقبل الذكاء الاصطناعي</title>
+  <title>$NYRA - Decentralized AI</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { background-color: #05070f; color: #e2e8f0; font-family: sans-serif; }
-    .neon-text { text-shadow: 0 0 10px #22d3ee; }
     .neon-border { border: 1px solid #22d3ee; box-shadow: 0 0 15px rgba(34, 211, 238, 0.3); }
     .neon-btn { background-color: #22d3ee; color: #05070f; font-weight: bold; }
+    [lang="ar"] { direction: rtl; font-family: 'Segoe UI', Tahoma, sans-serif; }
   </style>
 </head>
 <body>
 
-  <section class="pt-20 pb-10 text-center px-6">
-    <div class="max-w-4xl mx-auto">
-      
-      <div class="mb-8">
-        <img src="logo.jpg" alt="NYRA Logo" class="w-40 h-40 mx-auto rounded-full shadow-2xl border-4 border-cyan-400">
-      </div>
+  <div class="fixed top-4 right-4 z-50">
+    <button onclick="toggleLang()" class="bg-gray-800 text-white px-3 py-1 rounded text-sm neon-border">
+      EN / عربي
+    </button>
+  </div>
 
-      <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">
-        $NYRA <span class="text-cyan-400 neon-text">مستقبل الذكاء الاصطناعي</span>
-      </h1>
+  <section class="pt-20 text-center px-6">
+    <div class="max-w-4xl mx-auto">
+      <img src="logo.jpg" alt="NYRA Logo" class="w-40 h-40 mx-auto rounded-full shadow-2xl border-4 border-cyan-400 mb-8">
       
-      <p class="text-xl text-slate-400 mb-10">
-        العملة اللامركزية الأولى التي تدعم بروتوكولات الذكاء الاصطناعي المستقلة على Solana.
+      <h1 class="text-5xl font-extrabold text-white mb-6" id="title">
+        $NYRA Intelligence
+      </h1>
+      <p class="text-xl text-slate-400 mb-10" id="desc">
+        Decentralized AI on Solana.
       </p>
 
       <div class="p-4 rounded-xl bg-gray-900 border border-cyan-500 inline-block mb-10">
-        <p class="text-xs text-cyan-400 mb-1">عنوان العقد (CA):</p>
-        <p class="text-white font-mono text-sm break-all">FtwMC2AHWAijoUpU4oE6ce5wTMJvkyJexcETZUWVpump</p>
+        <p class="text-xs text-cyan-400">CA:</p>
+        <p class="text-white font-mono text-sm">FtwMC2AHWAijoUpU4oE6ce5wTMJvkyJexcETZUWVpump</p>
       </div>
 
       <div>
         <a href="https://pump.fun/FtwMC2AHWAijoUpU4oE6ce5wTMJvkyJexcETZUWVpump" target="_blank" 
-           class="neon-btn px-10 py-4 rounded-xl text-lg transition hover:scale-105">
-           شراء $NYRA الآن
+           class="neon-btn px-10 py-4 rounded-xl text-lg transition hover:scale-105" id="buyBtn">
+           Buy $NYRA
         </a>
       </div>
-
     </div>
   </section>
 
-  <footer class="py-10 text-center text-slate-500">
-    <p class="mb-4">تواصل معنا عبر:</p>
-    <a href="https://x.com/nyratoken?s=11&t=eIr8IDJ2AndTgJONvubSYw" target="_blank" class="text-cyan-400 hover:underline">Twitter (X)</a>
-  </footer>
-
+  <script>
+    let isAr = false;
+    function toggleLang() {
+      isAr = !isAr;
+      document.documentElement.lang = isAr ? "ar" : "en";
+      document.documentElement.dir = isAr ? "rtl" : "ltr";
+      
+      document.getElementById('title').innerText = isAr ? "$NYRA مستقبل الذكاء الاصطناعي" : "$NYRA Intelligence";
+      document.getElementById('desc').innerText = isAr ? "العملة اللامركزية الأولى على Solana." : "Decentralized AI on Solana.";
+      document.getElementById('buyBtn').innerText = isAr ? "شراء $NYRA الآن" : "Buy $NYRA";
+    }
+  </script>
 </body>
 </html>
