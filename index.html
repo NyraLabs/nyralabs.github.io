@@ -6,7 +6,16 @@
   <title>$NYRA - Strategic Asset</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { background-color: #05070f; color: #e2e8f0; font-family: sans-serif; }
+    /* دمج خلفية الصحراء مع تدرج لوني لضمان وضوح النصوص */
+    body { 
+      background: linear-gradient(rgba(5, 7, 15, 0.85), rgba(5, 7, 15, 0.85)), 
+                  url('https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #e2e8f0; 
+      font-family: sans-serif; 
+    }
     .neon-border { border: 1px solid #22d3ee; box-shadow: 0 0 15px rgba(34, 211, 238, 0.3); }
     .neon-btn { background-color: #22d3ee; color: #05070f; font-weight: bold; }
     [lang="ar"] { direction: rtl; }
@@ -29,7 +38,7 @@
         A highly efficient, new-generation digital currency. Built with a scalable roadmap and long-term vision to secure your place in the future of finance.
       </p>
 
-      <div class="p-4 rounded-xl bg-gray-900 border border-cyan-500 inline-block mb-10">
+      <div class="p-4 rounded-xl bg-gray-900/80 border border-cyan-500 inline-block mb-10">
         <p class="text-xs text-cyan-400">CONTRACT ADDRESS:</p>
         <p class="text-white font-mono text-sm">FtwMC2AHWAijoUpU4oE6ce5wTMJvkyJexcETZUWVpump</p>
       </div>
@@ -41,12 +50,12 @@
         </a>
       </div>
 
-      <div id="about" class="py-10 px-6 max-w-3xl mx-auto border-t border-gray-800">
+      <div id="about" class="py-10 px-6 max-w-3xl mx-auto border-t border-gray-800 bg-black/40 rounded-2xl">
         <div class="flex justify-center mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
         <h2 class="text-2xl font-bold text-white mb-4" id="aboutTitle">Who We Are</h2>
-        <p class="text-slate-400 leading-relaxed mb-6" id="aboutText">
+        <p class="text-slate-300 leading-relaxed mb-6" id="aboutText">
           At $NYRA, we believe in the power of efficient, next-generation digital assets. Our project is built for those who seek sustainable growth and long-term utility.
         </p>
         <p class="text-cyan-400 font-semibold italic" id="ambition">
@@ -78,7 +87,6 @@
       isAr = !isAr;
       document.documentElement.lang = isAr ? "ar" : "en";
       document.documentElement.dir = isAr ? "rtl" : "ltr";
-      
       document.getElementById('title').innerText = isAr ? "$NYRA: الجيل القادم من الأصول الرقمية" : "$NYRA: The Next-Gen Digital Asset";
       document.getElementById('desc').innerText = isAr ? "عملة رقمية فعالة وجديدة، مصممة برؤية مستدامة وبعيدة المدى لتأمين مكانك في مستقبل التداول المالي." : "A highly efficient, new-generation digital currency. Built with a scalable roadmap and long-term vision to secure your place in the future of finance.";
       document.getElementById('buyBtn').innerText = isAr ? "شراء $NYRA الآن" : "Buy $NYRA Now";
