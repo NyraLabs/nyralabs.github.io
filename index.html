@@ -3,43 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>$NYRA - Decentralized AI</title>
+  <title>$NYRA - Serious AI Asset</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { background-color: #05070f; color: #e2e8f0; font-family: sans-serif; }
     .neon-border { border: 1px solid #22d3ee; box-shadow: 0 0 15px rgba(34, 211, 238, 0.3); }
     .neon-btn { background-color: #22d3ee; color: #05070f; font-weight: bold; }
-    [lang="ar"] { direction: rtl; font-family: 'Segoe UI', Tahoma, sans-serif; }
+    [lang="ar"] { direction: rtl; }
   </style>
 </head>
 <body>
 
   <div class="fixed top-4 right-4 z-50">
-    <button onclick="toggleLang()" class="bg-gray-800 text-white px-3 py-1 rounded text-sm neon-border">
-      EN / عربي
-    </button>
+    <button onclick="toggleLang()" class="bg-gray-800 text-white px-3 py-1 rounded text-sm neon-border">EN / عربي</button>
   </div>
 
   <section class="pt-20 text-center px-6">
     <div class="max-w-4xl mx-auto">
       <img src="logo.jpg" alt="NYRA Logo" class="w-40 h-40 mx-auto rounded-full shadow-2xl border-4 border-cyan-400 mb-8">
       
-      <h1 class="text-5xl font-extrabold text-white mb-6" id="title">
-        $NYRA Intelligence
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6" id="title">
+        $NYRA: The Next-Gen AI Trading Asset
       </h1>
-      <p class="text-xl text-slate-400 mb-10" id="desc">
-        Decentralized AI on Solana.
+      <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto" id="desc">
+        Engineered for serious market participants. Built with a scalable roadmap and long-term utility for decentralized AI compute.
       </p>
 
       <div class="p-4 rounded-xl bg-gray-900 border border-cyan-500 inline-block mb-10">
-        <p class="text-xs text-cyan-400">CA:</p>
+        <p class="text-xs text-cyan-400">CONTRACT ADDRESS:</p>
         <p class="text-white font-mono text-sm">FtwMC2AHWAijoUpU4oE6ce5wTMJvkyJexcETZUWVpump</p>
       </div>
 
       <div>
         <a href="https://pump.fun/FtwMC2AHWAijoUpU4oE6ce5wTMJvkyJexcETZUWVpump" target="_blank" 
            class="neon-btn px-10 py-4 rounded-xl text-lg transition hover:scale-105" id="buyBtn">
-           Buy $NYRA
+           Buy $NYRA Now
         </a>
       </div>
     </div>
@@ -52,9 +50,9 @@
       document.documentElement.lang = isAr ? "ar" : "en";
       document.documentElement.dir = isAr ? "rtl" : "ltr";
       
-      document.getElementById('title').innerText = isAr ? "$NYRA مستقبل الذكاء الاصطناعي" : "$NYRA Intelligence";
-      document.getElementById('desc').innerText = isAr ? "العملة اللامركزية الأولى على Solana." : "Decentralized AI on Solana.";
-      document.getElementById('buyBtn').innerText = isAr ? "شراء $NYRA الآن" : "Buy $NYRA";
+      document.getElementById('title').innerText = isAr ? "$NYRA: الأصول الرقمية القادمة للذكاء الاصطناعي" : "$NYRA: The Next-Gen AI Trading Asset";
+      document.getElementById('desc').innerText = isAr ? "مصممة للمتداولين الجادين. خارطة طريق واضحة ومستدامة لتقنيات الذكاء الاصطناعي اللامركزي." : "Engineered for serious market participants. Built with a scalable roadmap and long-term utility for decentralized AI compute.";
+      document.getElementById('buyBtn').innerText = isAr ? "شراء $NYRA الآن" : "Buy $NYRA Now";
     }
   </script>
 </body>
