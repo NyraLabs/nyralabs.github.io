@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>$NYRA - Serious AI Asset</title>
+  <title>$NYRA - Strategic AI Asset</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { background-color: #05070f; color: #e2e8f0; font-family: sans-serif; }
@@ -34,11 +34,21 @@
         <p class="text-white font-mono text-sm">FtwMC2AHWAijoUpU4oE6ce5wTMJvkyJexcETZUWVpump</p>
       </div>
 
-      <div>
+      <div class="mb-12">
         <a href="https://pump.fun/FtwMC2AHWAijoUpU4oE6ce5wTMJvkyJexcETZUWVpump" target="_blank" 
            class="neon-btn px-10 py-4 rounded-xl text-lg transition hover:scale-105" id="buyBtn">
            Buy $NYRA Now
         </a>
+      </div>
+
+      <div class="mt-10 border-t border-gray-800 pt-8">
+        <h3 class="text-sm uppercase tracking-widest text-gray-500 mb-6" id="connect">Connect with the Protocol</h3>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="https://x.com/nyratoken?s=11&t=eIr8IDJ2AndTgJONvubSYw" class="text-cyan-400 hover:text-white transition">Twitter (X)</a>
+          <a href="https://t.me/nyratoken" class="text-cyan-400 hover:text-white transition">Telegram</a>
+          <a href="https://tiktok.com/@nyratoken" class="text-cyan-400 hover:text-white transition">TikTok</a>
+          <a href="mailto:nyralabs@example.com" class="text-cyan-400 hover:text-white transition">Email</a>
+        </div>
       </div>
     </div>
   </section>
@@ -53,6 +63,7 @@
       document.getElementById('title').innerText = isAr ? "$NYRA: الأصول الرقمية القادمة للذكاء الاصطناعي" : "$NYRA: The Next-Gen AI Trading Asset";
       document.getElementById('desc').innerText = isAr ? "مصممة للمتداولين الجادين. خارطة طريق واضحة ومستدامة لتقنيات الذكاء الاصطناعي اللامركزي." : "Engineered for serious market participants. Built with a scalable roadmap and long-term utility for decentralized AI compute.";
       document.getElementById('buyBtn').innerText = isAr ? "شراء $NYRA الآن" : "Buy $NYRA Now";
+      document.getElementById('connect').innerText = isAr ? "تواصل مع البروتوكول" : "Connect with the Protocol";
     }
   </script>
 </body>
